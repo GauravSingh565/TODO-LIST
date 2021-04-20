@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+    90deg,
+    rgba(253, 29, 29, 0.76234243697479) 0%,
+    rgba(252, 176, 69, 1) 65%,
+    rgba(173, 58, 180, 1) 100%
+  );
+}
+
+.remove {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+h1 {
+  margin-top: 3%;
+  font-size: 2rem;
+  animation: scale 0.6s infinite ease;
+}
+@keyframes scale {
+  0% {
+    color: #3498db;
+  }
+  25% {
+    color: #3498db;
+  }
+  50% {
+    color: #03305c;
+  }
+  100% {
+    color: #f00000;
+  }
+}
+#container {
+  height: auto;
+  padding: 10px 5px;
+  width: 30%;
+  transform: translateY(100%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  margin-bottom: 100px;
+  background-color: #ffff;
+}
+
+.content input {
+  padding: 10px 5px;
+  font-size: 1rem;
+  border: none;
+  width: 90%;
+  background: transparent;
+  border-bottom: 1px solid #03305c;
+  color: #111;
+}
+input:focus {
+  outline-style: none;
+}
+input::placeholder {
+  color: #03305c;
+}
+#btn {
+  margin-top: 10px;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+#btn:focus {
+  outline-style: none;
+}
+#btn i {
+  color: #03305c;
+  font-size: 1rem;
+}
+
+#todo {
+  height: auto;
+  width: 30%;
+  background-color: #ffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+p {
+  padding: 10px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid gray;
+}
+.delete {
+  color: #f00000;
+  font-size: 1rem !important;
+  float: right;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+.delete:focus {
+  outline-style: none;
+}
+element.style {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  #container {
+    width: 90%;
+  }
+  #todo {
+    width: 90%;
+  }
+}
+@media (max-width: 320px) {
+  #container {
+    width: 100%;
+  }
+  #todo {
+    width: 100%;
+  }
+}
